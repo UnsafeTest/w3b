@@ -35,5 +35,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with: 
-          name: etherjot-webiste.tar.gz
-          path: etherjot-webiste.tar.gz
+          name: etherjot-website.tar.gz
+          path: etherjot-website.tar.gz

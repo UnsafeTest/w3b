@@ -18,11 +18,11 @@ jobs:
 
       - run: npm install --global etherjot
       
-      - run: wget https://github.com/ethersphere/bee/releases/download/v1.16.1/bee-darwin-amd64
+      - run: wget https://github.com/ethersphere/bee/releases/download/v1.16.1/bee-linux-amd64
       
-      - run: chmod +x bee-darwin-amd64
+      - run: chmod +x bee-linux-amd64
       
-      - run: ./bee-darwin-amd64 dev &
+      - run: ./bee-linux-amd64 dev &
       
       - run: sleep 5
       

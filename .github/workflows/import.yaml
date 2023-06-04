@@ -1,0 +1,20 @@
+name: Exec etherjot import 
+
+on:
+  workflow_dispatch:
+
+jobs:
+  etherjot-import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.inputs.branch }}
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 16
+          registry-url: 'https://registry.npmjs.org'
+
+      - run: npm install --global etherjot
+      - run: etherjot import

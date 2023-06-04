@@ -17,4 +17,13 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - run: npm install --global etherjot
+      
+      - run: wget https://github.com/ethersphere/bee/releases/download/v1.16.1/bee-darwin-amd64 > bee
+      
+      - run: chmod +x bee
+      
+      - run: ./bee dev &
+      
+      - run: sleep 5
+      
       - run: etherjot import

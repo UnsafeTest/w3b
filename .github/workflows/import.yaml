@@ -29,3 +29,11 @@ jobs:
       - run: sleep 5
       
       - run: etherjot import
+      
+      - run: tar -zcvf etherjot-website.tar.gz dist
+      
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with: 
+          name: etherjot-webiste.tar.gz
+          path: etherjot-webiste.tar.gz

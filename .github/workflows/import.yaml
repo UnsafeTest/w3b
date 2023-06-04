@@ -16,13 +16,15 @@ jobs:
           node-version: 16
           registry-url: 'https://registry.npmjs.org'
 
-      - run: npm install --global etherjot
+      - run: npm install --global etherjot @ethersphere/swarm-cli
       
       - run: wget https://github.com/ethersphere/bee/releases/download/v1.16.1/bee-linux-amd64
       
       - run: chmod +x bee-linux-amd64
       
       - run: ./bee-linux-amd64 dev &
+      
+      - run: swarm-cli stamp buy --depth 22 --amount 22b --yes
       
       - run: sleep 5
       
